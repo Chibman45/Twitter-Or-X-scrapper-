@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "x-account-keyword-scraper"
+version = "0.1.0"
+description = "Config-driven X/Twitter account keyword scraper"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "PyYAML>=6.0",
+  "snscrape>=0.7.0.20230622",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+x-scraper = "x_scraper.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
