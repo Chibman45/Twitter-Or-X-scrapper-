@@ -1,0 +1,19 @@
+accounts:
+  - nasa
+  - OpenAI
+
+keywords:
+  include: ["launch", "AI", "research"]
+  exclude: ["giveaway"]
+  regex_mode: false
+
+export:
+  jsonl_path: output/tweets.jsonl
+  csv_path: output/tweets.csv
+
+storage:
+  sqlite_path: output/tweets.db
+  checkpoint_path: output/checkpoints.json
+
+runtime:
+  max_tweets_per_account: 50
